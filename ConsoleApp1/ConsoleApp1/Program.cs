@@ -54,6 +54,11 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(item.Name + "\n" + item.AuthorName);
             }
+            Console.WriteLine("\n==========SearchBooks===========\n");
+            foreach (var item in library.SearchBooks("250"))
+            {
+                Console.WriteLine(item.Name + "\n" + item.AuthorName + "\n" + item.PageCount);
+            }
         }
     }
 }

@@ -55,5 +55,18 @@ namespace ConsoleApp1
                 Console.WriteLine("Bele Bir No Yoxdur");
             
         }
+        public List<Book> SearchBooks(string str)
+        {
+            List <Book> FoundBook = new List<Book>();
+            foreach (Book book in Books)
+            {
+                string PageCount =Convert.ToString(book.PageCount);
+                if (book.Name.Contains(str) || book.AuthorName.Contains(str) || PageCount == str)
+                {
+                    FoundBook.Add(book);
+                }
+            }
+            return FoundBook;
+        }
     }
 }
