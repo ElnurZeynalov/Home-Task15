@@ -12,7 +12,7 @@ namespace ConsoleApp1
             List<Book> FoundBook = new List<Book>();
             foreach (Book book in Books)
             {
-                if(book.Name == name)
+                if(book.Name.Contains(name))
                     FoundBook.Add(book);
             }
             return FoundBook;
@@ -21,7 +21,7 @@ namespace ConsoleApp1
         {
             for (int i = 0; i < Books.Count; i++)
             {
-                if (Books[i].Name == name)
+                if (Books[i].Name.Contains(name))
                 {
                     Books.RemoveAt(i);
                 }
@@ -45,7 +45,7 @@ namespace ConsoleApp1
             {
                 for (int i = 0; i < Books.Count; i++)
                 {
-                    if (Books[i].No ==no)
+                    if (Books[i].No == no)
                     {
                     Books.RemoveAt(i);
                     }
